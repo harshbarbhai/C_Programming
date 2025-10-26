@@ -7,12 +7,10 @@ void Display(int iNo)
         iNo=-iNo;
     }
 
-    int iCnt=0;
-    iCnt=1;
-    while(iCnt<=iNo)
+    while(iNo>0)
     {
         printf("*");
-        iCnt++;
+        iNo--;
     }
     
 }
