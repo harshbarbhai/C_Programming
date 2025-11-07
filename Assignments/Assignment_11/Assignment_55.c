@@ -1,19 +1,24 @@
 #include<stdio.h>
 ///////////////////////////////////////////////////////////////////
-//Function Name:RangeDisplay
-//Description:To display the numbers in range of start to end
+//Function Name:RangeDisplayRev
+//Description:To display the numbers in range of End to start
 //input type:int,int
 //output type:void
 //Auther Name:Harsh Barbhai
 //Date:06/11/2025
 ///////////////////////////////////////////////////////////////////
-void RangeDisplay(int iStart,int iEnd)
+void RangeDisplayRev(int iStart,int iEnd)
 {
     int iCnt=0;
-    for(iCnt=iStart;iCnt<=iEnd;iCnt++)
+    if(iStart>=iEnd)
+    {
+        printf("invalid range");
+    }
+    for(iCnt=iEnd;iCnt>=iStart;iCnt--)
     {
         printf("%d\t",iCnt);
     }
+    
 }
 int main()
 {
@@ -25,7 +30,7 @@ int main()
     printf("Enter ending point:");
     scanf("%d",&iValue2);
 
-    RangeDisplay(iValue1,iValue2);
+    RangeDisplayRev(iValue1,iValue2);
 
     return 0;
 }
