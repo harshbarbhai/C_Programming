@@ -1,26 +1,33 @@
 #include<stdio.h>
 ///////////////////////////////////////////////////////////////////
-//Function Name:printf_numbers
-//Description:To take input from user and display all numbers
+//Function Name:printf_odd_numbers
+//Description:To take input from user and display all odd numbers
 //input type:int
 //output type:void
 //Auther Name:Harsh Barbhai
 //Date:08/11/2025
 ///////////////////////////////////////////////////////////////////
-void print_numbers(int limit)
+void print_odd_numbers(int limit)
 {
     int iCnt=0;
     if(limit<0)
     {
         for(iCnt=limit;iCnt<=-(limit);iCnt++)
         {
-            printf("%d\t",iCnt);
+            if((iCnt%2)!=0)
+            {
+                printf("%d\t",iCnt);
+            }  
+            
         }
     }
     
     for(iCnt=1;iCnt<=limit;iCnt++)
     {
-        printf("%d\t",iCnt);
+        if((iCnt%2)!=0)
+        {
+            printf("%d\t",iCnt);
+        }
     }
 }
 int main()
@@ -30,6 +37,6 @@ int main()
     printf("Enter number:");
 
     scanf("%d",&limit);
-    print_numbers(limit);
+    print_odd_numbers(limit);
     return 0;
 }
