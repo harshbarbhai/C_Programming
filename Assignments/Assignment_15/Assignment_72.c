@@ -1,14 +1,14 @@
 #include<stdio.h>
 //////////////////////////////////////////////////////////////////////////////////
-//Function Name:CountEven
-//Description:Accept the number from user and count number of even numbers
+//Function Name:CountOdd
+//Description:Accept the number from user and count number of odd numbers
 //input type:int
 //output type:int
 //Auther Name:Harsh Barbhai
 //Date:14/11/2025
 //////////////////////////////////////////////////////////////////////////////////
 
-int CountEven(int iNo)
+int CountOdd(int iNo)
 {   
     
     int iSum=0;
@@ -23,7 +23,7 @@ int CountEven(int iNo)
     {
         iDigit=iNo%10;
         iNo=iNo/10;
-        if(0==(iDigit%2))  //industrial programing practice 
+        if(1==(iDigit%2))  //industrial programing practice
         {
             iSum=iSum+1;
         }
@@ -37,8 +37,8 @@ int main()
     printf("Enter number :");
     scanf("%d",&iValue);
 
-    bRet=CountEven(iValue);
-    printf("numbers of even in given input are: %d",bRet);
+    bRet=CountOdd(iValue);
+    printf("numbers of odd in given input are: %d",bRet);
     
     return 0;
 }
