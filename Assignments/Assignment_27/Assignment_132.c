@@ -4,10 +4,10 @@
 //Description:pattern printing 
 //input:iRow=4 iCol=3
 //output: 
-//* * *
-//* * *
-//* * *
-//* * *
+//1 2 3
+//1 2 3
+//1 2 3 
+//1 2 3
 //input type:int
 //output type:void
 //Auther Name:Harsh Barbhai
@@ -20,7 +20,7 @@ void Pattern(int iRow,int iCol)
     {
         for(j=1;j<=iCol;j++)
         {
-            printf("*\t");
+            printf("%d\t",j);
         }
         printf("\n");
     }

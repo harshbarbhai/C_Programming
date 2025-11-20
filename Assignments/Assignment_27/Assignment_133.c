@@ -2,12 +2,11 @@
 ///////////////////////////////////////////////////////////////////////////////////////////
 //function Name:Pattern
 //Description:pattern printing 
-//input:iRow=4 iCol=3
+//input:iRow=3 iCol=4
 //output: 
-//* * *
-//* * *
-//* * *
-//* * *
+//4 3 2 1
+//4 3 2 1
+//4 3 2 1 
 //input type:int
 //output type:void
 //Auther Name:Harsh Barbhai
@@ -18,9 +17,9 @@ void Pattern(int iRow,int iCol)
     int i=0,j=0;
     for(i=1;i<=iRow;i++)
     {
-        for(j=1;j<=iCol;j++)
+        for(j=iCol;j>=1;j--)
         {
-            printf("*\t");
+            printf("%d\t",j);
         }
         printf("\n");
     }
