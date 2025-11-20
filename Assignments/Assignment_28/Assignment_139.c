@@ -4,9 +4,9 @@
 //Description:pattern printing 
 //input:iRow=3 iCol=4
 //output: 
-//A B C D
-//A B C D
-//A B C D
+//3 3 3 3
+//2 2 2 2
+//1 1 1 1
 //input type:int
 //output type:void
 //Auther Name:Harsh Barbhai
@@ -14,13 +14,14 @@
 ///////////////////////////////////////////////////////////////////////////////////////////
 void Pattern(int iRow,int iCol)
 {
-    int i=0,j=0,iSum=64;
-    for(i=1;i<=iRow;i++)
+    int i=0,j=0;
+    for(i=iRow;i>=1;i--)
     {
         for(j=1;j<=iCol;j++)
         {
-            printf("%c\t",j+iSum);
+            printf("%d\t",i);
         }
+        
         printf("\n");
     }
     
