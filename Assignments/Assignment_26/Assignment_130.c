@@ -1,7 +1,7 @@
 #include<stdio.h>
 ///////////////////////////////////////////////////////////////////////////////////////////
 //function Name:Pattern
-//Description:convert ASCII
+//Description:pattern printing input:3 output:2 4 6
 //input type:int
 //output type:void
 //Auther Name:Harsh Barbhai
@@ -10,11 +10,12 @@
 void Pattern(int iNo)
 {
     int iCnt=0;
+    int iSum=0;
     for(iCnt=1;iCnt<=iNo;iCnt++)
     {
-        printf("%c\t",iCnt+64);
+        iSum=iCnt*2;
+        printf("%d\t",iSum);  
     }
-    
 }
 int main()
 {
