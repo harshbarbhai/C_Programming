@@ -4,10 +4,10 @@
 //Description:pattern printing 
 //input:iRow=4 iCol=4
 //output: 
-//* # # #
-//* * # #
-//* * * #
-//* * * *
+//$ * * * 
+//* $ * *
+//* * $ *
+//* * * $
 //input type:int
 //output type:void
 //Auther Name:Harsh Barbhai
@@ -20,13 +20,13 @@ void Pattern(int iRow,int iCol)
     {
         for(j=1;j<=iCol;j++)
         { 
-            if(j<=i)
+            if(j==i)
             {
-                printf("*\t");
+                printf("$\t");
             }
             else 
             {
-                printf("#\t");
+                printf("*\t");
             }
 
         }

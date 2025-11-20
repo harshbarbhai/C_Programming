@@ -4,10 +4,10 @@
 //Description:pattern printing 
 //input:iRow=4 iCol=4
 //output: 
-//* # # #
-//* * # #
-//* * * #
 //* * * *
+//* * * #
+//* * # #
+//* # # #
 //input type:int
 //output type:void
 //Auther Name:Harsh Barbhai
@@ -15,12 +15,12 @@
 ///////////////////////////////////////////////////////////////////////////////////////////
 void Pattern(int iRow,int iCol)
 {
-    int i=0,j=0;
+    int i=0,j=0,iSum=iRow;
     for(i=1;i<=iRow;i++)
     {
         for(j=1;j<=iCol;j++)
         { 
-            if(j<=i)
+            if(j<=iSum)
             {
                 printf("*\t");
             }
@@ -30,6 +30,7 @@ void Pattern(int iRow,int iCol)
             }
 
         }
+        iSum--;
         
         printf("\n");
     }
