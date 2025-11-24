@@ -4,10 +4,10 @@
 //Description:pattern printing 
 //input:iRow=4 iCol=4
 //output: 
-//*
-//* *
-//* * *
-//* * * *
+//1 2 3 4
+//  2 3 4
+//    3 4
+//      4
 //input type:int
 //output type:void
 //Auther Name:Harsh Barbhai
@@ -16,18 +16,29 @@
 void Pattern(int iRow,int iCol)
 {
     int i=0,j=0;
-    for(i=1;i<=iRow;i++)
+    
+    if(iRow==iCol)
     {
-        for(j=1;j<=iCol;j++)
-        { 
-            if(i>=j)
-            {
-                printf("*\t");
+        for(i=1;i<=iRow;i++)
+        {
+            for(j=1;j<=iCol;j++)
+            { 
+                if(i<=j)
+                {
+                    printf("%d\t",j);
+                }
+                else 
+                {
+                    printf("\t");
+                }
+                
             }
-            
+            printf("\n");
         }
-        
-        printf("\n");
+    }
+    else 
+    {
+        printf("enter equal number of rows and column");
     }
     
 }
