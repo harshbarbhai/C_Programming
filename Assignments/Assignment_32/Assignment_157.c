@@ -5,9 +5,9 @@
 //input:iRow=4 iCol=4
 //output: 
 //* * * # 
-//* * # * 
-//* # * * 
-//# * * *
+//* * # @ 
+//* # @ @ 
+//# @ @ @
 //input type:int
 //output type:void
 //Auther Name:Harsh Barbhai
@@ -17,10 +17,11 @@
 void Pattern(int iRow,int iCol)
 {
     int i=0,j=0;
-    int k=iRow;
+    int k=iRow,l=iCol;
+    
     if(iRow==iCol)
     {
-        for(i=1;i<=iRow;i++,k--)
+        for(i=1;i<=iRow;i++,k--,l--)
         {
             for(j=1;j<=iCol;j++)
             {
@@ -28,9 +29,13 @@ void Pattern(int iRow,int iCol)
                 {
                     printf("#\t");
                 }
-                else 
+                else if(j<l) 
                 {
                     printf("*\t");
+                }
+                else 
+                {
+                    printf("@\t");
                 }
             }
             
